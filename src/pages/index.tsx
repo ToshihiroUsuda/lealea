@@ -5,7 +5,7 @@ import Layout from '../components/shell/layout'
 const Home: NextPage = () => {
   return (
     <>
-      <Layout />
+      <Layout home needInquiry />
     </>
   )
 }

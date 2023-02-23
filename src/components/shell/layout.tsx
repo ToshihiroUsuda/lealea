@@ -12,10 +12,10 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import Head from 'next/head'
-import Link from 'next/link'
+// import Link from 'next/link'
 import React, { useState } from 'react'
 
-// import Link from '../common/link'
+import Link from '../common/link'
 import InquiryButton from '../inquiry/inquiryButton'
 
 interface ILayoutProps extends React.PropsWithChildren {
@@ -95,12 +95,12 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
                   </Link>
                 </ListItem>
                 <ListItem disablePadding>
-                  <Link href='/content'>
+                  <Link href='/contact'>
                     <ListItemButton>
                       <ListItemIcon sx={{ color: 'white' }}>
                         <MailIcon />
                       </ListItemIcon>
-                      <Typography sx={{ color: 'white' }}>CONTENT</Typography>
+                      <Typography sx={{ color: 'white' }}>CONTACT</Typography>
                     </ListItemButton>
                   </Link>
                 </ListItem>

@@ -1,5 +1,3 @@
-import '../styles/App.css'
-
 import { CacheProvider, EmotionCache } from '@emotion/react'
 import CssBaseline from '@mui/material/CssBaseline'
 import { createTheme, ThemeProvider } from '@mui/material/styles'

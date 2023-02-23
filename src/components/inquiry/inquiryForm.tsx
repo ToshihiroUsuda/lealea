@@ -1,16 +1,9 @@
 import { yupResolver } from '@hookform/resolvers/yup'
-import {
-  Alert,
-  Button,
-  Snackbar,
-  Stack,
-  TextField,
-} from '@mui/material'
-import { Controller,SubmitHandler, useForm } from 'react-hook-form'
+import { Alert, Button, Snackbar, Stack, TextField } from '@mui/material'
+import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 
 import useResponse, { Response } from '../../hooks/useResponse'
-
 
 export interface IFormValues {
   name: string
@@ -36,7 +29,7 @@ const InquiryForm = () => {
     formState: { errors },
     handleSubmit,
   } = useForm<IFormValues>({
-defaultValues: defaultValues,
+    defaultValues: defaultValues,
     resolver: yupResolver(schema),
   })
 
@@ -119,12 +112,7 @@ defaultValues: defaultValues,
             />
           )}
         />
-        <Button
-          variant='contained'
-          type='submit'
-          size='large'
-          className='bg-gray-300 text-lg text-gray-800 hover:bg-teal-500 hover:text-white'
-        >
+        <Button variant='contained' type='submit' size='large'>
           送信する
         </Button>
       </Stack>
