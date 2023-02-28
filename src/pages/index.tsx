@@ -18,10 +18,10 @@ const Home: NextPage = () => {
       </Head>
       <Box sx={{ pt: 8, pb: 16 }}>
         <Box sx={{ position: 'relative', height: 'min(141vw, 160vh)' }}>
-          <Image src='/LP/lp1.jpg' alt='lp1' fill style={style} />
+          <Image src='/LP/lp1.png' alt='lp1' fill style={style} />
         </Box>
         <Box sx={{ position: 'relative', height: 'min(141vw, 160vh)' }}>
-          <Image src='/LP/lp2.jpg' alt='lp2' fill style={style} />
+          <Image src='/LP/lp2.png' alt='lp2' fill style={style} />
         </Box>
       </Box>
     </Layout>
