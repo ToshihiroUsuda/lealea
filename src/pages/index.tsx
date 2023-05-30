@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <Layout home needInquiry>
       <Head>
-        <title>KOA Consulting Farm</title>
+        <title>Lea Lea</title>
       </Head>
       <Box sx={{ pt: 8, pb: 16 }}>
         <Box sx={{ position: 'relative', height: 'min(141vw, 160vh)' }}>

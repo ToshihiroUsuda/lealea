@@ -36,9 +36,13 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
         <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
         <meta name='msapplication-TileColor' content='#da532c' />
         <meta name='theme-color' content='#ffffff' />
-        <meta name='description' content='オンラインダイエットコンサル KOA consulting farm' />
+        <meta name='description' content='Lea Lea' />
       </Head>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box
+        sx={{
+          flexGrow: 1,
+        }}
+      >
         <AppBar
           sx={{
             top: 0,
@@ -47,18 +51,19 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
             height: '64px',
             display: 'flex',
             justifyContent: 'center',
+            background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
           }}
           position='static'
           elevation={0}
         >
           <Toolbar>
-            <Typography variant='h6' color='white' sx={{ flexGrow: 1 }}>
-              KOA Consulting Farm
+            <Typography variant='h6' color='black' sx={{ flexGrow: 1 }}>
+              Lea Lea
             </Typography>
             <IconButton
               sx={{
                 display: { xs: 'block', sm: 'none' },
-                color: 'white',
+                color: 'black',
               }}
               aria-label='more'
               onClick={() => setIsOpen(!isOpen)}
@@ -81,26 +86,29 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
                 sx={{
                   ml: { xs: 0, sm: 'auto' },
                   display: { xs: 'block', sm: 'flex' },
-                  bgcolor: 'primary.main',
+                  background: {
+                    xs: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
+                    sm: 'rgba(255, 255, 255, 0)',
+                  },
                 }}
               >
                 <ListItem disablePadding>
                   <Link href='/'>
                     <ListItemButton>
-                      <ListItemIcon sx={{ color: 'white' }}>
+                      <ListItemIcon sx={{ color: 'black' }}>
                         <HomeIcon />
                       </ListItemIcon>
-                      <Typography sx={{ color: 'white' }}>HOME</Typography>
+                      <Typography sx={{ color: 'black' }}>HOME</Typography>
                     </ListItemButton>
                   </Link>
                 </ListItem>
                 <ListItem disablePadding>
                   <Link href='/contact'>
                     <ListItemButton>
-                      <ListItemIcon sx={{ color: 'white' }}>
+                      <ListItemIcon sx={{ color: 'black' }}>
                         <MailIcon />
                       </ListItemIcon>
-                      <Typography sx={{ color: 'white' }}>CONTACT</Typography>
+                      <Typography sx={{ color: 'black' }}>CONTACT</Typography>
                     </ListItemButton>
                   </Link>
                 </ListItem>
