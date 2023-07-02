@@ -14,7 +14,7 @@ const Home: NextPage = () => {
   return (
     <Layout home needInquiry>
       <Head>
-        <title>Lea Lea</title>
+        <title>Lea Lea（レアレア） 〜がんばるあなたに、よろこびを〜</title>
       </Head>
       <Box sx={{ pt: 4, pb: 20 }}>
         <Box sx={{ position: 'relative', height: 'min(141vw, 160vh)' }}>
