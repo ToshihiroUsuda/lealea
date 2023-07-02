@@ -1,5 +1,5 @@
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Alert, Button, Snackbar, Stack, TextField } from '@mui/material'
+import { Alert, Button, Snackbar, Stack, TextField, Typography } from '@mui/material'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 
@@ -112,9 +112,18 @@ const InquiryForm = () => {
             />
           )}
         />
-        <Button variant='contained' type='submit' size='large'>
+        <Button
+          variant='contained'
+          type='submit'
+          size='large'
+          sx={{
+            color: 'black',
+            background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
+          }}
+        >
           送信する
         </Button>
+        <Typography>※メールが届かない場合は迷惑メールをご確認ください</Typography>
       </Stack>
       <Snackbar
         open={response === Response.Success}

@@ -22,11 +22,11 @@ const InquiryButton = () => {
           color='primary'
           aria-label='add'
           sx={{
-            p: { xs: 3, sm: 5 },
+            p: { xs: 3, sm: 4 },
+            color: 'black',
             borderRadius: 100,
-            borderColor: 'white',
-            borderWidth: 3,
             width: 240,
+            background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
           }}
         >
           <Typography variant='h5'>お問い合せ</Typography>

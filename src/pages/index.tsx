@@ -16,12 +16,9 @@ const Home: NextPage = () => {
       <Head>
         <title>Lea Lea</title>
       </Head>
-      <Box sx={{ pt: 8, pb: 16 }}>
+      <Box sx={{ pt: 4, pb: 20 }}>
         <Box sx={{ position: 'relative', height: 'min(141vw, 160vh)' }}>
-          <Image src='/LP/lp1.png' alt='lp1' fill style={style} />
-        </Box>
-        <Box sx={{ position: 'relative', height: 'min(141vw, 160vh)' }}>
-          <Image src='/LP/lp2.png' alt='lp2' fill style={style} />
+          <Image src='/LP1.png' alt='企業理念' fill style={style} />
         </Box>
       </Box>
     </Layout>

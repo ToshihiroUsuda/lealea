@@ -19,7 +19,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     from: process.env.MAIL_USER,
     to: data.email,
     bcc: process.env.MAIL_USER,
-    subject: '[KOA Consulting Farm]お問い合わせありがとうございます！',
+    subject: '[Lea Lea]お問い合わせありがとうございます！',
     text: `
 ${data.name} 様
 
@@ -38,7 +38,7 @@ ${data.name} 様
 
 
 =========================
-   KOA Cunsulting Farm
+        Lea Lea
 =========================
 `,
   })

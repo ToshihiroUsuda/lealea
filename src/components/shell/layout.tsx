@@ -12,6 +12,7 @@ import ListItem from '@mui/material/ListItem'
 import ListItemButton from '@mui/material/ListItemButton'
 import ListItemIcon from '@mui/material/ListItemIcon'
 import Head from 'next/head'
+import Image from 'next/image'
 // import Link from 'next/link'
 import React, { useState } from 'react'
 
@@ -57,7 +58,8 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
           elevation={0}
         >
           <Toolbar>
-            <Typography variant='h6' color='black' sx={{ flexGrow: 1 }}>
+            <Image src='/icon.png' alt='Lea Lea' width={48} height={48} />
+            <Typography variant='h6' color='black' sx={{ pl: 2, flexGrow: 1 }}>
               Lea Lea
             </Typography>
             <IconButton
@@ -124,6 +126,7 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
               sx={{
                 borderTopWidth: 1,
                 borderColor: 'text.main',
+                pb: 6,
               }}
             >
               <Link href='/'>
@@ -134,7 +137,6 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
             </Box>
           )}
         </Container>
-        <Box></Box>
       </Box>
     </>
   )
