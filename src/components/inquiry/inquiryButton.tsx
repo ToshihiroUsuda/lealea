@@ -1,7 +1,8 @@
 // import Button from '@mui/material/Button'
+import { Mail as MailIcon } from '@mui/icons-material'
+import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
 import Fab from '@mui/material/Fab'
-import Typography from '@mui/material/Typography'
 
 import Link from '../common/link'
 
@@ -29,7 +30,8 @@ const InquiryButton = () => {
             background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
           }}
         >
-          <Typography variant='h5'>お問い合せ</Typography>
+          <MailIcon />
+          <Typography pl={1}>お問い合わせ</Typography>
         </Fab>
       </Link>
     </Box>

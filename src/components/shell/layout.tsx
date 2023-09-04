@@ -25,7 +25,6 @@ interface ILayoutProps extends React.PropsWithChildren {
 }
 
 const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
-  const [isOpen, setIsOpen] = useState(false)
   return (
     <>
       <Head>
@@ -44,80 +43,7 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
           flexGrow: 1,
         }}
       >
-        <AppBar
-          sx={{
-            top: 0,
-            zIndex: 10,
-            position: 'fixed',
-            height: '64px',
-            display: 'flex',
-            justifyContent: 'center',
-            background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
-          }}
-          position='static'
-          elevation={0}
-        >
-          <Toolbar>
-            <Image src='/icon.png' alt='Lea Lea' width={48} height={48} />
-            <Typography variant='h6' color='black' sx={{ pl: 2, flexGrow: 1 }}>
-              Lea Lea
-            </Typography>
-            <IconButton
-              sx={{
-                display: { xs: 'block', sm: 'none' },
-                color: 'black',
-              }}
-              aria-label='more'
-              onClick={() => setIsOpen(!isOpen)}
-              size='large'
-              edge='end'
-            >
-              {isOpen && <CloseIcon />}
-              {!isOpen && <MenuIcon />}
-            </IconButton>
-            <Box
-              sx={{
-                display: isOpen ? 'block' : { xs: 'none', sm: 'block' },
-                position: { xs: 'fixed', sm: 'relative' },
-                left: 0,
-                top: { xs: '64px', sm: 0 },
-                width: { xs: '100%', sm: 'auto' },
-              }}
-            >
-              <List
-                sx={{
-                  ml: { xs: 0, sm: 'auto' },
-                  display: { xs: 'block', sm: 'flex' },
-                  background: {
-                    xs: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
-                    sm: 'rgba(255, 255, 255, 0)',
-                  },
-                }}
-              >
-                <ListItem disablePadding>
-                  <Link href='/'>
-                    <ListItemButton>
-                      <ListItemIcon sx={{ color: 'black' }}>
-                        <HomeIcon />
-                      </ListItemIcon>
-                      <Typography sx={{ color: 'black' }}>HOME</Typography>
-                    </ListItemButton>
-                  </Link>
-                </ListItem>
-                <ListItem disablePadding>
-                  <Link href='/contact'>
-                    <ListItemButton>
-                      <ListItemIcon sx={{ color: 'black' }}>
-                        <MailIcon />
-                      </ListItemIcon>
-                      <Typography sx={{ color: 'black' }}>CONTACT</Typography>
-                    </ListItemButton>
-                  </Link>
-                </ListItem>
-              </List>
-            </Box>
-          </Toolbar>
-        </AppBar>
+        <Header />
         <Container>
           <Box pt={6}>{props.children}</Box>
           {props.needInquiry && <InquiryButton />}
@@ -137,8 +63,119 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
             </Box>
           )}
         </Container>
+        <Footer />
       </Box>
     </>
+  )
+}
+
+const Header: React.FC = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  return (
+    <AppBar
+      sx={{
+        top: 0,
+        zIndex: 10,
+        position: 'fixed',
+        height: '64px',
+        display: 'flex',
+        justifyContent: 'center',
+        background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
+      }}
+      position='static'
+      elevation={0}
+    >
+      <Toolbar>
+        <Image src='/icon.png' alt='Lea Lea' width={48} height={48} />
+        <Typography variant='h6' color='black' sx={{ pl: 2, flexGrow: 1 }}>
+          Lea Lea
+        </Typography>
+        <IconButton
+          sx={{
+            display: { xs: 'block', sm: 'none' },
+            color: 'black',
+          }}
+          aria-label='more'
+          onClick={() => setIsOpen(!isOpen)}
+          size='large'
+          edge='end'
+        >
+          {isOpen && <CloseIcon />}
+          {!isOpen && <MenuIcon />}
+        </IconButton>
+        <Box
+          sx={{
+            display: isOpen ? 'block' : { xs: 'none', sm: 'block' },
+            position: { xs: 'fixed', sm: 'relative' },
+            left: 0,
+            top: { xs: '64px', sm: 0 },
+            width: { xs: '100%', sm: 'auto' },
+          }}
+        >
+          <List
+            sx={{
+              ml: { xs: 0, sm: 'auto' },
+              display: { xs: 'block', sm: 'flex' },
+              background: {
+                xs: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
+                sm: 'rgba(255, 255, 255, 0)',
+              },
+            }}
+          >
+            <ListItem disablePadding>
+              <Link href='/'>
+                <ListItemButton>
+                  <ListItemIcon sx={{ color: 'black' }}>
+                    <HomeIcon />
+                  </ListItemIcon>
+                  <Typography sx={{ color: 'black' }}>HOME</Typography>
+                </ListItemButton>
+              </Link>
+            </ListItem>
+            <ListItem disablePadding>
+              <Link href='/contact'>
+                <ListItemButton>
+                  <ListItemIcon sx={{ color: 'black' }}>
+                    <MailIcon />
+                  </ListItemIcon>
+                  <Typography sx={{ color: 'black' }}>CONTACT</Typography>
+                </ListItemButton>
+              </Link>
+            </ListItem>
+          </List>
+        </Box>
+      </Toolbar>
+    </AppBar>
+  )
+}
+
+const Footer = () => {
+  return (
+    <Box
+      sx={{
+        background: 'linear-gradient(-90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
+        py: 1,
+      }}
+    >
+      <Box
+        sx={{
+          cursor: 'pointer',
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+        }}
+      >
+        <Link href='/'></Link>
+        <Image src='/icon.png' alt='Lea Lea' width={48} height={48} />
+        <Box sx={{ pt: '4px' }}>
+          <Link href='/scta'>
+            <Typography fontSize={12} color='white'>
+              特定商取引法に基づく表記
+            </Typography>
+          </Link>
+        </Box>
+      </Box>
+    </Box>
   )
 }
 

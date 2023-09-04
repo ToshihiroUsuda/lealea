@@ -1,24 +1,53 @@
-import { Box } from '@mui/material'
-import type { NextPage } from 'next'
+import { Box, Typography } from '@mui/material'
+import type { GetStaticProps, NextPage } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 
+import Background from '../components/shell/background'
 import Layout from '../components/shell/layout'
+import { getTopMessage } from '../libs/message'
 
 const style: React.CSSProperties = {
   objectFit: 'contain',
   objectPosition: 'top',
 }
 
-const Home: NextPage = () => {
+export const getStaticProps: GetStaticProps = async (context) => {
+  const message = getTopMessage()
+  return {
+    props: {
+      message,
+    },
+  }
+}
+
+const Home: NextPage = ({ message }: { message: string }) => {
+  const sentences = message.split('\n')
+  const fontFamily = ['Noto Serif JP'].join(',')
   return (
     <Layout home needInquiry>
       <Head>
         <title>Lea Lea（レアレア） 〜がんばるあなたに、よろこびを〜</title>
       </Head>
-      <Box sx={{ pt: 4, pb: 20 }}>
-        <Box sx={{ position: 'relative', height: 'min(141vw, 160vh)' }}>
-          <Image src='/LP1.png' alt='企業理念' fill style={style} />
+      <Box sx={{ py: { xs: 12, sm: 20 } }}>
+        <Box sx={{ position: 'relative' }}>
+          {/* <Image src='/LP1.png' alt='企業理念' fill style={style} /> */}
+          <Background>
+            <Typography fontSize={{ xs: 40, sm: 48 }} fontFamily={fontFamily}>
+              私たちの想い
+            </Typography>
+            <Box pt={6}>
+              {sentences.map((sentence, index) => (
+                <Typography
+                  key={index}
+                  fontFamily={fontFamily}
+                  fontSize={{ xs: 20, sm: 24 }}
+                  pt={sentence !== '' ? 1 : 2}
+                >
+                  {sentence}
+                </Typography>
+              ))}
+            </Box>
+          </Background>
         </Box>
       </Box>
     </Layout>
