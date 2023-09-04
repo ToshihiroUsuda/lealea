@@ -11,7 +11,11 @@ const style: React.CSSProperties = {
   objectPosition: 'top',
 }
 
-export const getStaticProps: GetStaticProps = async (context) => {
+type Props = {
+  message: string
+}
+
+export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const message = getTopMessage()
   return {
     props: {
@@ -20,7 +24,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   }
 }
 
-const Home: NextPage = ({ message }: { message: string }) => {
+const Home: NextPage<Props> = ({ message }: { message: string }) => {
   const sentences = message.split('\n')
   const fontFamily = ['Noto Serif JP'].join(',')
   return (
