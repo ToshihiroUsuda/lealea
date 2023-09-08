@@ -76,6 +76,7 @@ const InquiryForm = () => {
               required
               error={'name' in errors}
               helperText={errors.name?.message}
+              sx={{ bgcolor: 'white' }}
             />
           )}
         />
@@ -91,6 +92,7 @@ const InquiryForm = () => {
               required
               error={'email' in errors}
               helperText={errors.email?.message}
+              sx={{ bgcolor: 'white' }}
             />
           )}
         />
@@ -109,6 +111,7 @@ const InquiryForm = () => {
               required
               error={'inquiry' in errors}
               helperText={errors.inquiry?.message}
+              sx={{ bgcolor: 'white' }}
             />
           )}
         />

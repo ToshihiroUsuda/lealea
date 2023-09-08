@@ -4,8 +4,6 @@ const Background: React.FC<React.PropsWithChildren> = (props: React.PropsWithChi
   return (
     <Box
       sx={{
-        background:
-          'linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)),linear-gradient(-30deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
         width: '100%',
         height: '100%',
         display: 'flex',
@@ -18,7 +16,6 @@ const Background: React.FC<React.PropsWithChildren> = (props: React.PropsWithChi
           border: 2,
           borderTop: 'none',
           borderBottom: 'none',
-
           borderImage:
             'linear-gradient(-30deg, rgba(251, 249, 174, 1), rgba(155, 114, 54, 1), rgba(251, 249, 174, 1))',
           borderImageSlice: 1,
@@ -30,7 +27,6 @@ const Background: React.FC<React.PropsWithChildren> = (props: React.PropsWithChi
       >
         <Box
           sx={{
-            bgcolor: 'white',
             width: '97%',
             display: 'flex',
             justifyContent: 'center',
@@ -40,7 +36,8 @@ const Background: React.FC<React.PropsWithChildren> = (props: React.PropsWithChi
           <Box
             sx={{
               padding: { xs: 4, sm: 8 },
-              border: 10,
+              borderStyle: 'solid',
+              borderWidth: { xs: 6, sm: 10 },
               borderTop: 'none',
               borderBottom: 'none',
 

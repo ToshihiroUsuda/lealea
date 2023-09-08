@@ -19,6 +19,10 @@ import React, { useState } from 'react'
 import Link from '../common/link'
 import InquiryButton from '../inquiry/inquiryButton'
 
+const style: React.CSSProperties = {
+  objectFit: 'cover',
+}
+
 interface ILayoutProps extends React.PropsWithChildren {
   home?: boolean
   needInquiry?: boolean
@@ -38,12 +42,24 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
         <meta name='theme-color' content='#ffffff' />
         <meta name='description' content='Lea Lea' />
       </Head>
+
       <Box
         sx={{
           flexGrow: 1,
         }}
       >
         <Header />
+        <Box sx={{ position: 'fixed', width: '100vw', height: '100vh', zIndex: -50 }}>
+          <Image
+            src='/background.png'
+            alt='background image'
+            quality={100}
+            sizes='100vw'
+            // width={100}
+            fill
+            style={{ objectFit: 'cover' }}
+          />
+        </Box>
         <Container>
           <Box pt={6}>{props.children}</Box>
           {props.needInquiry && <InquiryButton />}

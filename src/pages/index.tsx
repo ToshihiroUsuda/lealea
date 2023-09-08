@@ -36,7 +36,7 @@ const Home: NextPage<Props> = ({ message }: { message: string }) => {
         <Box sx={{ position: 'relative' }}>
           {/* <Image src='/LP1.png' alt='企業理念' fill style={style} /> */}
           <Background>
-            <Typography fontSize={{ xs: 40, sm: 48 }} fontFamily={fontFamily}>
+            <Typography fontSize={{ xs: 32, sm: 48 }} fontFamily={fontFamily}>
               私たちの想い
             </Typography>
             <Box pt={6}>
@@ -44,7 +44,7 @@ const Home: NextPage<Props> = ({ message }: { message: string }) => {
                 <Typography
                   key={index}
                   fontFamily={fontFamily}
-                  fontSize={{ xs: 20, sm: 24 }}
+                  fontSize={{ xs: 16, sm: 24 }}
                   pt={sentence !== '' ? 1 : 2}
                 >
                   {sentence}
