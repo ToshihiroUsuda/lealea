@@ -25,6 +25,7 @@ const style: React.CSSProperties = {
 
 interface ILayoutProps extends React.PropsWithChildren {
   home?: boolean
+  background?: boolean
   needInquiry?: boolean
 }
 
@@ -49,17 +50,18 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
         }}
       >
         <Header />
-        <Box sx={{ position: 'fixed', width: '100vw', height: '100vh', zIndex: -50 }}>
-          <Image
-            src='/background.png'
-            alt='background image'
-            quality={100}
-            sizes='100vw'
-            // width={100}
-            fill
-            style={{ objectFit: 'cover' }}
-          />
-        </Box>
+        {props.background && (
+          <Box sx={{ position: 'fixed', width: '100vw', height: '100vh', zIndex: -50 }}>
+            <Image
+              src='/background.png'
+              alt='background image'
+              quality={100}
+              sizes='100vw'
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </Box>
+        )}
         <Container>
           <Box pt={6}>{props.children}</Box>
           {props.needInquiry && <InquiryButton />}
@@ -103,8 +105,8 @@ const Header: React.FC = () => {
     >
       <Toolbar>
         <Image src='/icon.png' alt='Lea Lea' width={48} height={48} />
-        <Typography variant='h6' color='black' sx={{ pl: 2, flexGrow: 1 }}>
-          Lea Lea
+        <Typography variant='h6' color='black' sx={{ pl: 2, flexGrow: 1, fontWeight: 'bold' }}>
+          子育て支援事業 Lea Lea
         </Typography>
         <IconButton
           sx={{
@@ -183,7 +185,12 @@ const Footer = () => {
       >
         <Link href='/'></Link>
         <Image src='/icon.png' alt='Lea Lea' width={48} height={48} />
-        <Box sx={{ pt: '4px' }}>
+        <Box sx={{ pt: '4px', textAlign: 'center' }}>
+          <Link href='/vision'>
+            <Typography fontSize={12} color='white'>
+              私たちの想い
+            </Typography>
+          </Link>
           <Link href='/scta'>
             <Typography fontSize={12} color='white'>
               特定商取引法に基づく表記

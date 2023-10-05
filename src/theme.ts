@@ -16,6 +16,9 @@ const defaultTheme = createTheme({
       contrastText: '#000000',
     },
   },
+  typography: {
+    fontFamily: ['"M PLUS Rounded 1c"'].join(','),
+  },
 })
 
 export default defaultTheme

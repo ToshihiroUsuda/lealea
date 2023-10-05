@@ -12,7 +12,7 @@ const Contact = () => {
         <title>お問い合わせ</title>
       </Head>
       <Box sx={{ pt: 12, pb: 8 }}>
-        <Typography sx={{ py: 4 }} variant='h3'>
+        <Typography sx={{ py: 4, fontWeight: 'bold', fontSize: { xs: 36, sm: 48 } }} variant='h3'>
           お問い合せ
         </Typography>
         <InquiryForm />

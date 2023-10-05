@@ -76,7 +76,7 @@ const InquiryForm = () => {
               required
               error={'name' in errors}
               helperText={errors.name?.message}
-              sx={{ bgcolor: 'white' }}
+              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
             />
           )}
         />
@@ -92,7 +92,7 @@ const InquiryForm = () => {
               required
               error={'email' in errors}
               helperText={errors.email?.message}
-              sx={{ bgcolor: 'white' }}
+              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
             />
           )}
         />
@@ -111,7 +111,7 @@ const InquiryForm = () => {
               required
               error={'inquiry' in errors}
               helperText={errors.inquiry?.message}
-              sx={{ bgcolor: 'white' }}
+              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
             />
           )}
         />
@@ -126,7 +126,9 @@ const InquiryForm = () => {
         >
           送信する
         </Button>
-        <Typography>※メールが届かない場合は迷惑メールをご確認ください</Typography>
+        <Typography sx={{ fontSize: { xs: 12, sm: 16 } }}>
+          ※メールが届かない場合は迷惑メールをご確認ください
+        </Typography>
       </Stack>
       <Snackbar
         open={response === Response.Success}

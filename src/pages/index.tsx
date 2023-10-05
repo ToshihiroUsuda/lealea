@@ -1,59 +1,173 @@
-import { Box, Typography } from '@mui/material'
-import type { GetStaticProps, NextPage } from 'next'
+import { Box, Button, Typography } from '@mui/material'
+import type { NextPage } from 'next'
 import Head from 'next/head'
+import Image from 'next/image'
 
-import Background from '../components/shell/background'
+import Link from '../components/common/link'
+import { Column, FlexBox, Row } from '../components/common/styledComponents'
 import Layout from '../components/shell/layout'
-import { getTopMessage } from '../libs/message'
 
-const style: React.CSSProperties = {
-  objectFit: 'contain',
-  objectPosition: 'top',
-}
-
-type Props = {
-  message: string
-}
-
-export const getStaticProps: GetStaticProps<Props> = async (context) => {
-  const message = getTopMessage()
-  return {
-    props: {
-      message,
-    },
-  }
-}
-
-const Home: NextPage<Props> = ({ message }: { message: string }) => {
-  const sentences = message.split('\n')
-  const fontFamily = ['Noto Serif JP'].join(',')
+const Home: NextPage = () => {
   return (
-    <Layout home needInquiry>
+    <Layout home>
       <Head>
-        <title>Lea Lea（レアレア） 〜がんばるあなたに、よろこびを〜</title>
+        <title>Lea Lea（レアレア）家事代行サービス</title>
       </Head>
-      <Box sx={{ py: { xs: 12, sm: 20 } }}>
-        <Box sx={{ position: 'relative' }}>
-          {/* <Image src='/LP1.png' alt='企業理念' fill style={style} /> */}
-          <Background>
-            <Typography fontSize={{ xs: 32, sm: 48 }} fontFamily={fontFamily}>
-              私たちの想い
-            </Typography>
-            <Box pt={6}>
-              {sentences.map((sentence, index) => (
-                <Typography
-                  key={index}
-                  fontFamily={fontFamily}
-                  fontSize={{ xs: 16, sm: 24 }}
-                  pt={sentence !== '' ? 1 : 2}
-                >
-                  {sentence}
+      <Column alignItems={'center'} sx={{ py: { xs: 12, sm: 20 } }}>
+        <Column sx={{ flexDirection: { xs: 'column', md: 'row' } }}>
+          {/** 新米ママ*/}
+          <FlexBox flexDirection='row' justifyContent='center' alignItems='center' height={240}>
+            <Column mx={1} justifyContent='space-evenly' height='100%'>
+              <Box>
+                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>子育ても仕事も</Typography>
+                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>がんばりたい</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: { xs: 24, sm: 32 } }} fontWeight={'bold'}>
+                  新米ママと
                 </Typography>
-              ))}
-            </Box>
-          </Background>
+              </Box>
+            </Column>
+            <Column justifyContent='center' mx={1}>
+              <Box sx={{ width: 160, height: 240, position: 'relative' }}>
+                <Image src='/assets/temp.png' alt='新米ママ' fill style={{ objectFit: 'cover' }} />
+              </Box>
+            </Column>
+          </FlexBox>
+
+          <FlexBox
+            flexDirection='row-reverse'
+            justifyContent='center'
+            alignItems='center'
+            height={240}
+          >
+            <Column mx={1} justifyContent='space-evenly' height='100%'>
+              <Box>
+                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>子育ても仕事も</Typography>
+                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>がんばりたい</Typography>
+              </Box>
+              <Box>
+                <Typography sx={{ fontSize: { xs: 24, sm: 32 } }} fontWeight={'bold'}>
+                  新米ママと
+                </Typography>
+              </Box>
+            </Column>
+            <Column justifyContent='center' mx={1}>
+              <Box sx={{ width: 160, height: 240, position: 'relative' }}>
+                <Image src='/assets/temp.png' alt='新米ママ' fill style={{ objectFit: 'cover' }} />
+              </Box>
+            </Column>
+          </FlexBox>
+        </Column>
+
+        <Box sx={{ py: 2 }}>
+          <Typography
+            textAlign={'center'}
+            sx={{ fontSize: { xs: 32, sm: 48 } }}
+            fontSize={48}
+            fontWeight={'bold'}
+          >
+            マッチング！！
+          </Typography>
         </Box>
-      </Box>
+
+        <Box
+          sx={{
+            py: 8,
+            background:
+              'radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),linear-gradient(45deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
+            borderRadius: 1000,
+            maxWidth: 600,
+            width: '100%',
+          }}
+        >
+          <Typography
+            textAlign={'center'}
+            fontWeight={'bold'}
+            sx={{ fontSize: { xs: 16, sm: 28 } }}
+          >
+            子育て支援事業Lea Lea
+          </Typography>
+          <Typography
+            textAlign={'center'}
+            fontWeight={'bold'}
+            sx={{ fontSize: { xs: 32, sm: 48 } }}
+          >
+            家事代行サービス
+          </Typography>
+          <Row sx={{ py: 2, justifyContent: 'center' }}>
+            <Box
+              position='relative'
+              sx={{ width: { xs: 160, sm: 200 }, height: { xs: 120, sm: 150 } }}
+            >
+              <Image src='/assets/temp.png' alt='新米ママ' fill style={{ objectFit: 'cover' }} />
+            </Box>
+            <Box
+              position='relative'
+              sx={{ width: { xs: 160, sm: 200 }, height: { xs: 120, sm: 150 } }}
+            >
+              <Image src='/assets/temp.png' alt='新米ママ' fill style={{ objectFit: 'cover' }} />
+            </Box>
+          </Row>
+        </Box>
+
+        <Row sx={{ py: 2, justifyContent: 'center', alignItems: 'space-between' }}>
+          <Box px={1}>
+            <Link href='/for-customer'>
+              <Button
+                variant='contained'
+                sx={{
+                  pb: 2,
+                  px: 2,
+                  color: 'black',
+                  borderRadius: 10,
+                  width: { xs: 160, sm: 240 },
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  bgcolor: 'primary.light',
+                }}
+              >
+                <Box sx={{ width: '90%', height: { xs: 160, sm: 240 }, position: 'relative' }}>
+                  <Image
+                    src='/assets/temp.png'
+                    alt='先輩ママ'
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </Box>
+                <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>支援したい方</Typography>
+              </Button>
+            </Link>
+          </Box>
+          <Box px={1}>
+            <Link href='/for-worker'>
+              <Button
+                variant='contained'
+                sx={{
+                  pb: 2,
+                  px: 2,
+                  color: 'black',
+                  borderRadius: 10,
+                  width: { xs: 160, sm: 240 },
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  bgcolor: 'secondary.light',
+                }}
+              >
+                <Box sx={{ width: '90%', height: { xs: 160, sm: 240 }, position: 'relative' }}>
+                  <Image
+                    src='/assets/temp.png'
+                    alt='先輩ママ'
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </Box>
+                <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>支援したい方</Typography>
+              </Button>
+            </Link>
+          </Box>
+        </Row>
+      </Column>
     </Layout>
   )
 }

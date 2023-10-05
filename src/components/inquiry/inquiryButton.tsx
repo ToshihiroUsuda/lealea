@@ -12,7 +12,7 @@ const InquiryButton = () => {
       role='presentation'
       sx={{
         position: 'fixed',
-        bottom: { xs: 32, sm: 48 },
+        bottom: { xs: 48, sm: 48 },
         left: '50%',
         transform: 'translateX(-50%)',
       }}
@@ -31,7 +31,9 @@ const InquiryButton = () => {
           }}
         >
           <MailIcon />
-          <Typography pl={1}>お問い合わせ</Typography>
+          <Typography pl={1} sx={{ fontSize: { xs: 16, sm: 24 } }}>
+            お問い合わせ
+          </Typography>
         </Fab>
       </Link>
     </Box>

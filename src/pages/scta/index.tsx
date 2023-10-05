@@ -41,7 +41,7 @@ const SCTAPage = () => {
         <title>特定商取引法に基づく表記</title>
       </Head>
       <Box sx={{ py: 8, px: { xs: 1, sm: 8 } }} className='py-20 px-4 md:px-48 md:py-8'>
-        <Typography py={1} variant='h3'>
+        <Typography variant='h3' sx={{ py: 1, fontWeight: 'bold', fontSize: { xs: 36, sm: 48 } }}>
           特定商取引法に基づく表記
         </Typography>
         <Box px={1}>
