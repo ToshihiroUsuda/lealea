@@ -46,10 +46,10 @@ const Home: NextPage = () => {
             alignItems='center'
             height={240}
           >
-            <Column mx={1} justifyContent='space-evenly' height='100%'>
+            <Column mx={1} justifyContent='space-evenly' alignContent='end' height='100%'>
               <Box>
-                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>子育ても仕事も</Typography>
-                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>がんばりたい</Typography>
+                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>子育てを終え</Typography>
+                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>地域に貢献したい</Typography>
               </Box>
               <Box>
                 <Typography sx={{ fontSize: { xs: 24, sm: 32 } }} fontWeight={'bold'}>

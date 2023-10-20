@@ -35,10 +35,10 @@ const Flow: React.FC = () => {
         <FlowBlock needArrow>
           <Link href='/contact'>
             <Button variant='text' color='info'>
-              <Row>
-                <MailIcon />
-                <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>お問い合わせ</Typography>
-              </Row>
+              <MailIcon sx={{ fontSize: { xs: 20, sm: 28 } }} />
+              <Typography pl={1} sx={{ fontSize: { xs: 16, sm: 24 } }}>
+                お問い合わせ
+              </Typography>
             </Button>
           </Link>
           <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>からお申し込み</Typography>
