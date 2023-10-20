@@ -11,13 +11,17 @@ function createData(courseName: string, price: number) {
   return { courseName, price }
 }
 
-const rows = [createData('1回2時間, 月4回', 20000), createData('1回3時間, 月4回', 30000)]
+const rows = [
+  createData('1回2時間, 月4回', 18000),
+  createData('1回2時間, 月8回', 36000),
+  createData('1回2時間, 月12回', 48000),
+]
 
 const PriceTable: React.FC = () => {
   return (
     <TableContainer
       component={Paper}
-      sx={{ bgcolor: 'primary.light', borderRadius: 8, width: { xs: 320, sm: 540 } }}
+      sx={{ bgcolor: 'primary.main', borderRadius: 8, width: { xs: 280, sm: 540 } }}
     >
       <Table sx={{}} aria-label='simple table'>
         <TableHead>
@@ -48,10 +52,7 @@ const PriceTable: React.FC = () => {
         </TableHead>
         <TableBody>
           {rows.map((row) => (
-            <TableRow
-              key={row.courseName}
-              sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
-            >
+            <TableRow key={row.courseName}>
               <TableCell
                 sx={{
                   fontFamily: '"M PLUS Rounded 1c"',

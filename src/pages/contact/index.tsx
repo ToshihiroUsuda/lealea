@@ -2,8 +2,8 @@ import Box from '@mui/material/Box'
 import Typography from '@mui/material/Typography'
 import Head from 'next/head'
 
-import InquiryForm from '../../components/inquiry/inquiryForm'
 import Layout from '../../components/shell/layout'
+import InquiryForm from './inquiryForm'
 
 const Contact = () => {
   return (

@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Column } from '../../components/common/styledComponents'
+import { Column, Row } from '../../components/common/styledComponents'
 import Layout from '../../components/shell/layout'
 import CustomerVoice from './customerVoice'
 import Flow from './flow'
@@ -20,7 +20,26 @@ const CustomerPage: NextPage = () => {
           コンセプト
         </Typography>
         <Column sx={{ alignItems: 'center' }}>
-          <Image src='/assets/temp.png' alt='新米ママ' width={320} height={320} />
+          <Row>
+            <Box
+              position='relative'
+              sx={{ width: { xs: 120, sm: 200 }, height: { xs: 160, sm: 240 } }}
+            >
+              <Image
+                src='/assets/Beginer6.png'
+                alt='新米ママ'
+                fill
+                style={{ objectFit: 'cover' }}
+              />
+            </Box>
+            <Box
+              position='relative'
+              sx={{ width: { xs: 120, sm: 200 }, height: { xs: 160, sm: 240 } }}
+            >
+              <Image src='/assets/Senior3.png' alt='先輩ママ' fill style={{ objectFit: 'cover' }} />
+            </Box>
+          </Row>
+
           <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>
             たまった家事を、家事業のプロの先輩ママにやってもらうことで、
           </Typography>
@@ -36,15 +55,17 @@ const CustomerPage: NextPage = () => {
           <CustomerVoice
             name='A'
             age={20}
-            imageUrl='/assets/temp.png'
-            voice='あああああああああああああああああああああああああああ'
+            imageUrl='/assets/Beginer4.png'
+            // voice='あああああああああああああああああああああああああああ'
+            voice='とても気さくな方でしたが、仕事はプロでした！！また使用したいです。'
             bgcolor='primary'
           />
           <CustomerVoice
             name='B'
             age={20}
-            imageUrl='/assets/temp.png'
-            voice='いいいいいいいいいいいいいいいいいいいいいいいいいいい'
+            imageUrl='/assets/Beginer7.png'
+            // voice='いいいいいいいいいいいいいいいいいいいいいいいいいいい'
+            voice='家事を進めてくれたおかげで、子供とたくさん遊ぶ時間ができ幸せでした。'
             bgcolor='secondary'
           />
         </Column>

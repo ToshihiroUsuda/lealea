@@ -15,6 +15,7 @@ const InquiryButton = () => {
         bottom: { xs: 48, sm: 48 },
         left: '50%',
         transform: 'translateX(-50%)',
+        zIndex: 10,
       }}
     >
       <Link href='/contact'>
@@ -24,10 +25,10 @@ const InquiryButton = () => {
           aria-label='add'
           sx={{
             p: { xs: 3, sm: 4 },
-            color: 'black',
+            // color: 'black',
             borderRadius: 100,
             width: 240,
-            background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
+            // background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
           }}
         >
           <MailIcon />

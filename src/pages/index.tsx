@@ -30,7 +30,12 @@ const Home: NextPage = () => {
             </Column>
             <Column justifyContent='center' mx={1}>
               <Box sx={{ width: 160, height: 240, position: 'relative' }}>
-                <Image src='/assets/temp.png' alt='新米ママ' fill style={{ objectFit: 'cover' }} />
+                <Image
+                  src='/assets/Beginer6.png'
+                  alt='新米ママ'
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </Box>
             </Column>
           </FlexBox>
@@ -48,13 +53,18 @@ const Home: NextPage = () => {
               </Box>
               <Box>
                 <Typography sx={{ fontSize: { xs: 24, sm: 32 } }} fontWeight={'bold'}>
-                  新米ママと
+                  先輩ママが
                 </Typography>
               </Box>
             </Column>
             <Column justifyContent='center' mx={1}>
               <Box sx={{ width: 160, height: 240, position: 'relative' }}>
-                <Image src='/assets/temp.png' alt='新米ママ' fill style={{ objectFit: 'cover' }} />
+                <Image
+                  src='/assets/Senior3.png'
+                  alt='先輩ママ'
+                  fill
+                  style={{ objectFit: 'cover' }}
+                />
               </Box>
             </Column>
           </FlexBox>
@@ -67,105 +77,93 @@ const Home: NextPage = () => {
             fontSize={48}
             fontWeight={'bold'}
           >
-            マッチング！！
-          </Typography>
-        </Box>
-
-        <Box
-          sx={{
-            py: 8,
-            background:
-              'radial-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)),linear-gradient(45deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
-            borderRadius: 1000,
-            maxWidth: 600,
-            width: '100%',
-          }}
-        >
-          <Typography
-            textAlign={'center'}
-            fontWeight={'bold'}
-            sx={{ fontSize: { xs: 16, sm: 28 } }}
-          >
-            子育て支援事業Lea Lea
+            ともに輝ける
           </Typography>
           <Typography
             textAlign={'center'}
-            fontWeight={'bold'}
             sx={{ fontSize: { xs: 32, sm: 48 } }}
+            fontSize={48}
+            fontWeight={'bold'}
           >
-            家事代行サービス
+            地域へ！
           </Typography>
-          <Row sx={{ py: 2, justifyContent: 'center' }}>
-            <Box
-              position='relative'
-              sx={{ width: { xs: 160, sm: 200 }, height: { xs: 120, sm: 150 } }}
-            >
-              <Image src='/assets/temp.png' alt='新米ママ' fill style={{ objectFit: 'cover' }} />
+        </Box>
+        <Box>
+          <Box
+            sx={{
+              background:
+                'radial-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.7)),linear-gradient(45deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
+              borderRadius: '50%',
+              height: { xs: 320, sm: 480 },
+              width: { xs: 320, sm: 480 },
+              filter: 'blur(20px)',
+              position: 'absolute',
+            }}
+          />
+          <Column
+            sx={{
+              justifyContent: 'center',
+              borderRadius: '50%',
+              height: { xs: 320, sm: 480 },
+              width: { xs: 320, sm: 480 },
+            }}
+          >
+            <Box position='relative'>
+              <Typography
+                textAlign={'center'}
+                fontWeight={'bold'}
+                sx={{ fontSize: { xs: 16, sm: 28 } }}
+              >
+                子育て支援事業Lea Lea
+              </Typography>
+              <Typography
+                textAlign={'center'}
+                fontWeight={'bold'}
+                sx={{ fontSize: { xs: 32, sm: 48 } }}
+              >
+                家事代行サービス
+              </Typography>
+              <Row sx={{ py: 2, justifyContent: 'center' }}>
+                <Box
+                  position='relative'
+                  sx={{ width: { xs: 140, sm: 200 }, height: { xs: 120, sm: 150 } }}
+                >
+                  <Image
+                    src='/assets/Beginer2.png'
+                    alt='新米ママ'
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </Box>
+                <Box
+                  position='relative'
+                  sx={{ width: { xs: 140, sm: 200 }, height: { xs: 120, sm: 150 } }}
+                >
+                  <Image
+                    src='/assets/Senior2.png'
+                    alt='先輩ママ'
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </Box>
+              </Row>
             </Box>
-            <Box
-              position='relative'
-              sx={{ width: { xs: 160, sm: 200 }, height: { xs: 120, sm: 150 } }}
-            >
-              <Image src='/assets/temp.png' alt='新米ママ' fill style={{ objectFit: 'cover' }} />
-            </Box>
-          </Row>
+          </Column>
         </Box>
 
-        <Row sx={{ py: 2, justifyContent: 'center', alignItems: 'space-between' }}>
-          <Box px={1}>
-            <Link href='/for-customer'>
-              <Button
-                variant='contained'
-                sx={{
-                  pb: 2,
-                  px: 2,
-                  color: 'black',
-                  borderRadius: 10,
-                  width: { xs: 160, sm: 240 },
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  bgcolor: 'primary.light',
-                }}
-              >
-                <Box sx={{ width: '90%', height: { xs: 160, sm: 240 }, position: 'relative' }}>
-                  <Image
-                    src='/assets/temp.png'
-                    alt='先輩ママ'
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </Box>
-                <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>支援したい方</Typography>
-              </Button>
-            </Link>
-          </Box>
-          <Box px={1}>
-            <Link href='/for-worker'>
-              <Button
-                variant='contained'
-                sx={{
-                  pb: 2,
-                  px: 2,
-                  color: 'black',
-                  borderRadius: 10,
-                  width: { xs: 160, sm: 240 },
-                  flexDirection: 'column',
-                  justifyContent: 'center',
-                  bgcolor: 'secondary.light',
-                }}
-              >
-                <Box sx={{ width: '90%', height: { xs: 160, sm: 240 }, position: 'relative' }}>
-                  <Image
-                    src='/assets/temp.png'
-                    alt='先輩ママ'
-                    fill
-                    style={{ objectFit: 'cover' }}
-                  />
-                </Box>
-                <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>支援したい方</Typography>
-              </Button>
-            </Link>
-          </Box>
+        <Row sx={{ py: 6, justifyContent: 'center', alignItems: 'space-between' }}>
+          <LinkButton
+            linkUrl='/for-customer'
+            imageUrl='/assets/Beginer3.png'
+            buttonColor='primary'
+            buttonText='利用したい方'
+          />
+          <LinkButton
+            linkUrl='/for-worker'
+            imageUrl='/assets/Senior1.png'
+            buttonColor='secondary'
+            buttonText='働きたい方'
+          />
         </Row>
       </Column>
     </Layout>
@@ -173,3 +171,54 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+type LinkButtonProps = {
+  linkUrl: string
+  imageUrl: string
+  buttonColor: 'primary' | 'secondary'
+  buttonText: string
+}
+
+const LinkButton: React.FC<LinkButtonProps> = ({ linkUrl, imageUrl, buttonColor, buttonText }) => {
+  return (
+    <Box p={1}>
+      <Link href={linkUrl}>
+        <Button
+          variant='contained'
+          color={buttonColor}
+          sx={{
+            pb: 2,
+            px: 2,
+            color: 'black',
+            borderRadius: 10,
+            height: { xs: 200, sm: 280 },
+            width: { xs: 160, sm: 240 },
+            flexDirection: 'column',
+            justifyContent: 'end',
+            position: 'relative',
+          }}
+        >
+          <Box
+            sx={{
+              width: { xs: 120, sm: 200 },
+              height: { xs: 120, sm: 200 },
+              top: '10%',
+              borderRadius: '50%',
+              bgcolor: 'white',
+              position: 'absolute',
+            }}
+          >
+            <Image src={imageUrl} alt='' fill style={{ objectFit: 'cover' }} />
+          </Box>
+          <Typography
+            sx={{
+              fontSize: { xs: 16, sm: 24 },
+            }}
+          >
+            {buttonText}
+          </Typography>
+        </Button>
+      </Link>
+    </Box>
+  )
+}

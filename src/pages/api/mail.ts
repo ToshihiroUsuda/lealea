@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { createTransport } from 'nodemailer'
 
-import { IFormValues } from '../../components/inquiry/inquiryForm'
+import { IFormValues, inquiryText, isValidInquiry } from '../contact/inquiryForm'
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const transporter = createTransport({
@@ -15,6 +15,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   })
 
   const data = JSON.parse(req.body) as IFormValues
+  const inquiry: string = isValidInquiry(data.inquiry) ? inquiryText[data.inquiry] : ''
   await transporter.sendMail({
     from: process.env.MAIL_USER,
     to: data.email,
@@ -34,6 +35,7 @@ ${data.name} 様
       ${data.email}
 
   ▼お問い合わせ内容
+      ${inquiry}
       ${data.inquiry}
 
 

@@ -74,8 +74,8 @@ const Layout: React.FC<ILayoutProps> = (props: ILayoutProps) => {
               }}
             >
               <Link href='/'>
-                <Button variant='text' startIcon={<ArrowBackIcon />}>
-                  <Typography color='primary'>Back to Home</Typography>
+                <Button variant='text' color='info' startIcon={<ArrowBackIcon />}>
+                  <Typography>ホームに戻る</Typography>
                 </Button>
               </Link>
             </Box>
@@ -105,7 +105,7 @@ const Header: React.FC = () => {
     >
       <Toolbar>
         <Image src='/icon.png' alt='Lea Lea' width={48} height={48} />
-        <Typography variant='h6' color='black' sx={{ pl: 2, flexGrow: 1, fontWeight: 'bold' }}>
+        <Typography color='black' sx={{ pl: 2, flexGrow: 1, fontWeight: 'bold' }}>
           子育て支援事業 Lea Lea
         </Typography>
         <IconButton
@@ -146,17 +146,17 @@ const Header: React.FC = () => {
                   <ListItemIcon sx={{ color: 'black' }}>
                     <HomeIcon />
                   </ListItemIcon>
-                  <Typography sx={{ color: 'black' }}>HOME</Typography>
+                  <Typography sx={{ color: 'black' }}>ホーム</Typography>
                 </ListItemButton>
               </Link>
             </ListItem>
             <ListItem disablePadding>
               <Link href='/contact'>
-                <ListItemButton>
+                <ListItemButton sx={{ width: 200 }}>
                   <ListItemIcon sx={{ color: 'black' }}>
                     <MailIcon />
                   </ListItemIcon>
-                  <Typography sx={{ color: 'black' }}>CONTACT</Typography>
+                  <Typography sx={{ color: 'black' }}>お問い合わせ</Typography>
                 </ListItemButton>
               </Link>
             </ListItem>

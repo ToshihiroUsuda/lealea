@@ -1,26 +1,42 @@
 import { yupResolver } from '@hookform/resolvers/yup'
-import { Alert, Button, Snackbar, Stack, TextField, Typography } from '@mui/material'
+import { Alert, Button, MenuItem, Snackbar, Stack, TextField, Typography } from '@mui/material'
 import { Controller, SubmitHandler, useForm } from 'react-hook-form'
 import * as yup from 'yup'
 
 import useResponse, { Response } from '../../hooks/useResponse'
 
+const inquiryOptions = ['customer', 'worker'] as const
+
+export type InquiryType = (typeof inquiryOptions)[number]
+
+export const inquiryText: Record<InquiryType, string> = {
+  customer: '家事代行を利用したい',
+  worker: '家事代行で働きたい',
+}
+
+export const isValidInquiry = (value: string): value is InquiryType => {
+  return inquiryOptions.some((option) => value == option)
+}
+
 export interface IFormValues {
   name: string
   email: string
-  inquiry: string
+  inquiry: InquiryType
+  detail?: string
 }
 
 export const defaultValues: IFormValues = {
   name: '',
   email: '',
-  inquiry: '',
+  inquiry: 'customer',
+  detail: '',
 }
 
 const schema: yup.SchemaOf<IFormValues> = yup.object({
   name: yup.string().required('必須項目です'),
   email: yup.string().required('必須項目です').email('有効な形式ではありません'),
-  inquiry: yup.string().required('必須項目です'),
+  inquiry: yup.mixed().oneOf(['customer', 'worker']),
+  detail: yup.string(),
 })
 
 const InquiryForm = () => {
@@ -86,7 +102,7 @@ const InquiryForm = () => {
           render={({ field }) => (
             <TextField
               {...field}
-              type='text'
+              type='email'
               label='メールアドレス'
               fullWidth
               required
@@ -103,14 +119,38 @@ const InquiryForm = () => {
           render={({ field }) => (
             <TextField
               {...field}
-              type='inquiry'
+              select
               label='お問い合せ内容'
-              multiline
-              rows={8}
               fullWidth
               required
               error={'inquiry' in errors}
               helperText={errors.inquiry?.message}
+              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
+            >
+              {inquiryOptions.map((key: InquiryType, index) => {
+                return (
+                  <MenuItem key={index} value={key}>
+                    {inquiryText[key]}
+                  </MenuItem>
+                )
+              })}
+            </TextField>
+          )}
+        />
+
+        <Controller
+          name='detail'
+          control={control}
+          render={({ field }) => (
+            <TextField
+              {...field}
+              type='text'
+              label='その他、気になることがございましたらご記載ください'
+              multiline
+              rows={8}
+              fullWidth
+              error={'detail' in errors}
+              helperText={errors.detail?.message}
               sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
             />
           )}
@@ -121,7 +161,6 @@ const InquiryForm = () => {
           size='large'
           sx={{
             color: 'black',
-            background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
           }}
         >
           送信する
