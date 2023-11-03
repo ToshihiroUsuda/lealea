@@ -12,6 +12,7 @@ function createData(courseName: string, price: number) {
 }
 
 const rows = [
+  createData('1回2時間, 月2回', 10000),
   createData('1回2時間, 月4回', 18000),
   createData('1回2時間, 月8回', 36000),
   createData('1回2時間, 月12回', 48000),
