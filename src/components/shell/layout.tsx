@@ -17,6 +17,7 @@ import Image from 'next/image'
 import React, { useState } from 'react'
 
 import Link from '../common/link'
+import { Column, Row } from '../common/styledComponents'
 import InquiryButton from '../inquiry/inquiryButton'
 
 const style: React.CSSProperties = {
@@ -183,20 +184,46 @@ const Footer = () => {
           alignItems: 'center',
         }}
       >
-        <Link href='/'></Link>
-        <Image src='/icon.png' alt='Lea Lea' width={48} height={48} />
-        <Box sx={{ pt: '4px', textAlign: 'center' }}>
-          <Link href='/vision'>
-            <Typography fontSize={12} color='white'>
-              私たちの想い
+        <Link href='/'>
+          <Column alignItems={'center'}>
+            <Image src='/icon.png' alt='Lea Lea' width={64} height={64} />
+            <Typography fontWeight='bold' py={1} color='black'>
+              Lea Lea(レアレア)
             </Typography>
-          </Link>
-          <Link href='/scta'>
-            <Typography fontSize={12} color='white'>
-              特定商取引法に基づく表記
+          </Column>
+        </Link>
+        <Row sx={{ py: 2 }}>
+          <Box sx={{ textAlign: 'center', width: 160 }}>
+            <Typography fontWeight='bold' py={1}>
+              About us
             </Typography>
-          </Link>
-        </Box>
+            <Link href='/vision'>
+              <Typography fontSize={12} color='rgb(16,16,16)'>
+                私たちの想い
+              </Typography>
+            </Link>
+          </Box>
+          <Box sx={{ textAlign: 'center', width: 160 }}>
+            <Typography fontWeight='bold' py={1}>
+              Legal
+            </Typography>
+            <Link href='/terms-of-service/customer'>
+              <Typography fontSize={12} color='rgb(16,16,16)'>
+                利用規約
+              </Typography>
+            </Link>
+            <Link href='/privacy-policy/customer'>
+              <Typography fontSize={12} color='rgb(16,16,16)'>
+                プライバシーポリシー
+              </Typography>
+            </Link>
+            <Link href='/scta'>
+              <Typography fontSize={12} color='rgb(16,16,16)'>
+                特定商取引法に基づく表記
+              </Typography>
+            </Link>
+          </Box>
+        </Row>
       </Box>
     </Box>
   )
