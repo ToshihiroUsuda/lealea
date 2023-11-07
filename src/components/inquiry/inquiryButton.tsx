@@ -1,18 +1,35 @@
-// import Button from '@mui/material/Button'
 import { Mail as MailIcon } from '@mui/icons-material'
 import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
 import Fab from '@mui/material/Fab'
+import { useCallback, useEffect, useState } from 'react'
 
 import Link from '../common/link'
 
+const defaultBottom = 48
+const headerHeight = 280
+
 const InquiryButton = () => {
+  const [bottom, setBottom] = useState(defaultBottom)
+
+  const changeBottom = useCallback(() => {
+    const bottomPosition = document.body.offsetHeight - (window.scrollY + window.innerHeight)
+    if (bottomPosition < headerHeight) {
+      setBottom(defaultBottom + headerHeight - bottomPosition)
+    }
+  }, [])
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeBottom)
+    return () => window.removeEventListener('scroll', changeBottom)
+  }, [changeBottom])
+
   return (
     <Box
       role='presentation'
       sx={{
         position: 'fixed',
-        bottom: { xs: 48, sm: 48 },
+        bottom: bottom,
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 10,

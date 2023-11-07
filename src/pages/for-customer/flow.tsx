@@ -1,4 +1,4 @@
-import { ArrowDownwardTwoTone, Mail as MailIcon } from '@mui/icons-material'
+import { ArrowDownwardTwoTone } from '@mui/icons-material'
 import { Button, Paper, Typography } from '@mui/material'
 import React from 'react'
 
@@ -33,15 +33,14 @@ const Flow: React.FC = () => {
     <Row py={2} justifyContent={'center'}>
       <Column minWidth={320} sx={{ width: '70%', alignItems: 'center' }}>
         <FlowBlock needArrow>
-          <Link href='/contact'>
+          <Link href='https://lin.ee/5ngDh7K'>
             <Button variant='text' color='info'>
-              <MailIcon sx={{ fontSize: { xs: 20, sm: 28 } }} />
               <Typography pl={1} sx={{ fontSize: { xs: 16, sm: 24 } }}>
-                お問い合わせ
+                Lea Lea 公式Line
               </Typography>
             </Button>
           </Link>
-          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>からお申し込み</Typography>
+          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>をお友達追加</Typography>
         </FlowBlock>
 
         <FlowBlock needArrow>

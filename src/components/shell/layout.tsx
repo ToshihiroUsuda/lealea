@@ -172,12 +172,14 @@ const Footer = () => {
   return (
     <Box
       sx={{
+        height: 280,
         background: 'linear-gradient(-90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
         py: 1,
       }}
     >
       <Box
         sx={{
+          py: 1,
           cursor: 'pointer',
           display: 'flex',
           flexDirection: 'column',

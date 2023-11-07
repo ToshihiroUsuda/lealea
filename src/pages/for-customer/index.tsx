@@ -54,7 +54,7 @@ const CustomerPage: NextPage = () => {
         <Column sx={{ justifyContent: 'center' }}>
           <CustomerVoice
             name='A'
-            age={20}
+            age={30}
             imageUrl='/assets/Beginer4.png'
             // voice='あああああああああああああああああああああああああああ'
             voice='とても気さくな方でしたが、仕事はプロでした！！また使用したいです。'
@@ -62,7 +62,7 @@ const CustomerPage: NextPage = () => {
           />
           <CustomerVoice
             name='B'
-            age={20}
+            age={30}
             imageUrl='/assets/Beginer7.png'
             // voice='いいいいいいいいいいいいいいいいいいいいいいいいいいい'
             voice='家事を進めてくれたおかげで、子供とたくさん遊ぶ時間ができ幸せでした。'
