@@ -38,7 +38,7 @@ const InquiryButton = () => {
       <Link href='/contact'>
         <Fab
           variant='extended'
-          color='primary'
+          color='secondary'
           aria-label='add'
           sx={{
             p: { xs: 3, sm: 4 },

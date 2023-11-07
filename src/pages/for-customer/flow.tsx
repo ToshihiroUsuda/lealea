@@ -14,7 +14,7 @@ const FlowBlock: React.FC<{ needArrow?: boolean } & React.PropsWithChildren> = (
           my: 2,
           width: '100%',
           height: 80,
-          bgcolor: 'secondary.main',
+          bgcolor: 'primary.main',
           justifyContent: 'center',
           alignItems: 'center',
           borderRadius: 10,

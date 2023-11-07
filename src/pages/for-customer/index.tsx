@@ -66,7 +66,7 @@ const CustomerPage: NextPage = () => {
             imageUrl='/assets/Beginer7.png'
             // voice='いいいいいいいいいいいいいいいいいいいいいいいいいいい'
             voice='家事を進めてくれたおかげで、子供とたくさん遊ぶ時間ができ幸せでした。'
-            bgcolor='secondary'
+            bgcolor='primary'
           />
         </Column>
 
