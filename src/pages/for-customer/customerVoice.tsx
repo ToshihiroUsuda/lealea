@@ -1,8 +1,8 @@
-import { Box, Paper, Typography } from '@mui/material'
+import { Box, Paper } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
-import { Column, Row } from '../../components/common/styledComponents'
+import { Column, Description, Row } from '../../components/common/styledComponents'
 
 type Props = {
   name: string
@@ -21,9 +21,7 @@ const CustomerVoice: React.FC<Props> = ({ name, age, imageUrl, voice, bgcolor })
           <Image src={imageUrl} alt={`${name}さん`} fill style={{ objectFit: 'cover' }} />
         </Box>
 
-        <Typography
-          sx={{ fontSize: { xs: 12, sm: 24 } }}
-        >{`${name}さん(${ageString}代女性)`}</Typography>
+        <Description>{`${name}さん(${ageString}代女性)`}</Description>
       </Column>
       <Paper
         sx={{
@@ -37,7 +35,7 @@ const CustomerVoice: React.FC<Props> = ({ name, age, imageUrl, voice, bgcolor })
           p: 2,
         }}
       >
-        <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>{voice}</Typography>
+        <Description>{voice}</Description>
       </Paper>
     </Row>
   )

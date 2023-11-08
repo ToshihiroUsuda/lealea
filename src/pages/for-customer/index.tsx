@@ -1,9 +1,9 @@
-import { Box, Typography } from '@mui/material'
+import { Box } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Column, Row } from '../../components/common/styledComponents'
+import { Column, Description, Row, Title } from '../../components/common/styledComponents'
 import Layout from '../../components/shell/layout'
 import CustomerVoice from './customerVoice'
 import Flow from './flow'
@@ -15,10 +15,10 @@ const CustomerPage: NextPage = () => {
       <Head>
         <title>子育て支援事業Lea Lea（レアレア） 家事代行を利用したい方</title>
       </Head>
-      <Box sx={{ py: { xs: 12, sm: 20 }, px: 2 }}>
-        <Typography pt={4} variant='h3' fontWeight={'bold'} sx={{ fontSize: { xs: 36, sm: 48 } }}>
+      <Box sx={{ py: { xs: 12, sm: 20 }, px: 1 }}>
+        <Title pt={4} variant='h3'>
           コンセプト
-        </Typography>
+        </Title>
         <Column sx={{ alignItems: 'center' }}>
           <Row>
             <Box
@@ -40,17 +40,13 @@ const CustomerPage: NextPage = () => {
             </Box>
           </Row>
 
-          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>
-            たまった家事を、家事業のプロの先輩ママにやってもらうことで、
-          </Typography>
-          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>
-            空いた時間を子供と向き合う時間にあてよう！！
-          </Typography>
+          <Description>たまった家事を、家事業のプロの先輩ママにやってもらうことで、</Description>
+          <Description>空いた時間を子供と向き合う時間にあてよう！！</Description>
         </Column>
 
-        <Typography pt={6} variant='h3' fontWeight={'bold'} sx={{ fontSize: { xs: 36, sm: 48 } }}>
+        <Title pt={6} variant='h3'>
           お客様の声
-        </Typography>
+        </Title>
         <Column sx={{ justifyContent: 'center' }}>
           <CustomerVoice
             name='A'
@@ -70,16 +66,16 @@ const CustomerPage: NextPage = () => {
           />
         </Column>
 
-        <Typography pt={6} variant='h3' fontWeight={'bold'} sx={{ fontSize: { xs: 36, sm: 48 } }}>
+        <Title pt={6} variant='h3'>
           料金表
-        </Typography>
+        </Title>
         <Column sx={{ pt: 4, alignItems: 'center' }}>
           <PriceTable />
         </Column>
 
-        <Typography pt={6} variant='h3' fontWeight={'bold'} sx={{ fontSize: { xs: 36, sm: 48 } }}>
+        <Title pt={6} variant='h3'>
           利用開始までの流れ
-        </Typography>
+        </Title>
         <Flow />
       </Box>
     </Layout>

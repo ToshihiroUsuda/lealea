@@ -1,10 +1,10 @@
 import { Box } from '@mui/material'
-import Typography from '@mui/material/Typography'
 import type { NextPage } from 'next'
 import { GetStaticPaths, GetStaticProps } from 'next'
 import Head from 'next/head'
 import ReactMarkdown from 'react-markdown'
 
+import { Title } from '../../components/common/styledComponents'
 import Layout from '../../components/shell/layout'
 import { getAllMarkdowns, getContent } from '../../libs/privacy_policy'
 
@@ -26,16 +26,16 @@ export const getStaticPaths: GetStaticPaths = async () => {
   }
 }
 
-const PrivacyPolicy: NextPage<{ content: string }> = (props) => {
+const PrivacyPolicyPage: NextPage<{ content: string }> = (props) => {
   return (
     <Layout>
       <Head>
         <title>プライバシーポリシー 家事代行を利用したい方</title>
       </Head>
       <Box sx={{ py: { xs: 12, sm: 20 }, px: 2 }}>
-        <Typography pt={4} variant='h3' fontWeight={'bold'} sx={{ fontSize: { xs: 36, sm: 48 } }}>
+        <Title pt={4} variant='h3'>
           プライバシーポリシー
-        </Typography>
+        </Title>
         <Box sx={{ px: { xs: 2, sm: 10 }, pt: 8, fontSize: { xs: 10, sm: 16 } }}>
           <ReactMarkdown>{props.content}</ReactMarkdown>
         </Box>
@@ -44,4 +44,4 @@ const PrivacyPolicy: NextPage<{ content: string }> = (props) => {
   )
 }
 
-export default PrivacyPolicy
+export default PrivacyPolicyPage

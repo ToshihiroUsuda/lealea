@@ -1,8 +1,8 @@
 import Box from '@mui/material/Box'
-import Typography from '@mui/material/Typography'
 import styled from '@mui/system/styled'
 import Head from 'next/head'
 
+import { Title } from '../../components/common/styledComponents'
 import Layout from '../../components/shell/layout'
 
 const Th = styled('th')(({ theme }) => ({
@@ -41,9 +41,9 @@ const SCTAPage = () => {
         <title>特定商取引法に基づく表記</title>
       </Head>
       <Box sx={{ py: 8, px: { xs: 1, sm: 8 } }}>
-        <Typography variant='h3' sx={{ py: 1, fontWeight: 'bold', fontSize: { xs: 36, sm: 48 } }}>
+        <Title variant='h3' sx={{ py: 1 }}>
           特定商取引法に基づく表記
-        </Typography>
+        </Title>
         <Box px={1}>
           <Box sx={{ width: '90%', my: 3, m: 'auto' }}>
             <tr>

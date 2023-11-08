@@ -1,10 +1,10 @@
 import { Mail as MailIcon } from '@mui/icons-material'
-import { Typography } from '@mui/material'
 import Box from '@mui/material/Box'
 import Fab from '@mui/material/Fab'
 import { useCallback, useEffect, useState } from 'react'
 
 import Link from '../common/link'
+import { Description } from '../common/styledComponents'
 
 const defaultBottom = 48
 const headerHeight = 280
@@ -49,9 +49,7 @@ const InquiryButton = () => {
           }}
         >
           <MailIcon />
-          <Typography pl={1} sx={{ fontSize: { xs: 16, sm: 24 } }}>
-            お問い合わせ
-          </Typography>
+          <Description pl={1}>お問い合わせ</Description>
         </Fab>
       </Link>
     </Box>

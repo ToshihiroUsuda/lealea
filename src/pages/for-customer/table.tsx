@@ -1,4 +1,3 @@
-import { Typography } from '@mui/material'
 import Paper from '@mui/material/Paper'
 import Table from '@mui/material/Table'
 import TableBody from '@mui/material/TableBody'
@@ -8,7 +7,7 @@ import TableHead from '@mui/material/TableHead'
 import TableRow from '@mui/material/TableRow'
 import React from 'react'
 
-import { Column } from '../../components/common/styledComponents'
+import { Column, Description } from '../../components/common/styledComponents'
 
 function createData(courseName: string, price: number) {
   return { courseName, price }
@@ -26,9 +25,9 @@ const generalCourse = [
 const PriceTable: React.FC = () => {
   return (
     <Column>
-      <Typography sx={{ fontSize: { xs: 16, sm: 24 }, py: 2, fontWeight: 'bold' }}>
+      <Description py={2} fontWeight='bold'>
         モニターコース
-      </Typography>
+      </Description>
       <TableContainer
         component={Paper}
         sx={{ bgcolor: 'primary.main', borderRadius: 8, width: { xs: 300, sm: 540 } }}
@@ -39,7 +38,7 @@ const PriceTable: React.FC = () => {
               <TableCell
                 sx={{
                   fontFamily: '"M PLUS Rounded 1c"',
-                  fontSize: { xs: 14, sm: 24 },
+                  fontSize: { xs: 14, sm: 20 },
                   fontWeight: 'bold',
                   width: '50%',
                   color: 'white',
@@ -51,7 +50,7 @@ const PriceTable: React.FC = () => {
               <TableCell
                 sx={{
                   fontFamily: '"M PLUS Rounded 1c"',
-                  fontSize: { xs: 14, sm: 24 },
+                  fontSize: { xs: 14, sm: 20 },
                   fontWeight: 'bold',
                   width: '50%',
                   color: 'white',
@@ -68,7 +67,7 @@ const PriceTable: React.FC = () => {
                 <TableCell
                   sx={{
                     fontFamily: '"M PLUS Rounded 1c"',
-                    fontSize: { xs: 14, sm: 24 },
+                    fontSize: { xs: 14, sm: 20 },
                     width: '50%',
                   }}
                   component='th'
@@ -80,7 +79,7 @@ const PriceTable: React.FC = () => {
                 <TableCell
                   sx={{
                     fontFamily: '"M PLUS Rounded 1c"',
-                    fontSize: { xs: 14, sm: 24 },
+                    fontSize: { xs: 14, sm: 20 },
                     width: '50%',
                   }}
                   align='center'
@@ -92,9 +91,9 @@ const PriceTable: React.FC = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <Typography sx={{ fontSize: { xs: 16, sm: 24 }, py: 2, fontWeight: 'bold' }}>
+      <Description py={2} fontWeight='bold'>
         通常コース
-      </Typography>
+      </Description>
       <TableContainer
         component={Paper}
         sx={{ bgcolor: 'primary.main', borderRadius: 8, width: { xs: 300, sm: 540 } }}
@@ -105,7 +104,7 @@ const PriceTable: React.FC = () => {
               <TableCell
                 sx={{
                   fontFamily: '"M PLUS Rounded 1c"',
-                  fontSize: { xs: 14, sm: 24 },
+                  fontSize: { xs: 14, sm: 20 },
                   fontWeight: 'bold',
                   width: '50%',
                   color: 'white',
@@ -117,7 +116,7 @@ const PriceTable: React.FC = () => {
               <TableCell
                 sx={{
                   fontFamily: '"M PLUS Rounded 1c"',
-                  fontSize: { xs: 14, sm: 24 },
+                  fontSize: { xs: 14, sm: 20 },
                   fontWeight: 'bold',
                   width: '50%',
                   color: 'white',
@@ -134,7 +133,7 @@ const PriceTable: React.FC = () => {
                 <TableCell
                   sx={{
                     fontFamily: '"M PLUS Rounded 1c"',
-                    fontSize: { xs: 14, sm: 24 },
+                    fontSize: { xs: 14, sm: 20 },
                     width: '50%',
                   }}
                   component='th'
@@ -146,7 +145,7 @@ const PriceTable: React.FC = () => {
                 <TableCell
                   sx={{
                     fontFamily: '"M PLUS Rounded 1c"',
-                    fontSize: { xs: 14, sm: 24 },
+                    fontSize: { xs: 14, sm: 20 },
                     width: '50%',
                   }}
                   align='center'

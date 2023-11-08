@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import { Column } from '../../components/common/styledComponents'
+import { Column, Description, Title } from '../../components/common/styledComponents'
 import Layout from '../../components/shell/layout'
 import InquiryForm from './inquiryForm'
 
@@ -15,14 +15,14 @@ const Contact = () => {
         <title>お問い合わせ</title>
       </Head>
       <Box sx={{ pt: 12, pb: 8 }}>
-        <Typography sx={{ py: 4, fontWeight: 'bold', fontSize: { xs: 36, sm: 48 } }} variant='h3'>
+        <Title sx={{ py: 4 }} variant='h3'>
           お問い合せ
-        </Typography>
+        </Title>
         <Column px={4}>
-          <Typography sx={{ fontSize: { xs: 16, sm: 24 }, py: 2 }}>
+          <Description sx={{ py: 2 }}>
             Lea Lea 公式LINEをお友達追加、もしくは下記
             お問い合わせフォームからお問い合わせください。
-          </Typography>
+          </Description>
           <Typography sx={{ fontSize: { xs: 20, sm: 32 }, py: 4, fontWeight: 'bold' }}>
             公式LINE
           </Typography>
@@ -56,7 +56,7 @@ const Contact = () => {
               </Box>
             </Link>
             <Column alignItems='center' width={640} sx={{ display: { xs: 'none', sm: 'block' } }}>
-              <Typography pb={1} fontSize={20} fontWeight={'bold'}>
+              <Typography textAlign={'center'} pb={1} fontSize={20} fontWeight={'bold'}>
                 QRコードでLINEの友だちを追加
               </Typography>
               <Typography textAlign={'center'}>

@@ -92,7 +92,7 @@ const InquiryForm = () => {
               required
               error={'name' in errors}
               helperText={errors.name?.message}
-              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
+              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 20 } }}
             />
           )}
         />
@@ -108,7 +108,7 @@ const InquiryForm = () => {
               required
               error={'email' in errors}
               helperText={errors.email?.message}
-              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
+              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 20 } }}
             />
           )}
         />
@@ -125,7 +125,7 @@ const InquiryForm = () => {
               required
               error={'inquiry' in errors}
               helperText={errors.inquiry?.message}
-              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
+              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 240 } }}
             >
               {inquiryOptions.map((key: InquiryType, index) => {
                 return (
@@ -151,7 +151,7 @@ const InquiryForm = () => {
               fullWidth
               error={'detail' in errors}
               helperText={errors.detail?.message}
-              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 24 } }}
+              sx={{ bgcolor: 'white', fontSize: { xs: 16, sm: 20 } }}
             />
           )}
         />

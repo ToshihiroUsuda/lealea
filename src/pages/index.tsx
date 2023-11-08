@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 import Link from '../components/common/link'
-import { Column, FlexBox, Row } from '../components/common/styledComponents'
+import { Column, Description, FlexBox, Row, Title } from '../components/common/styledComponents'
 import Layout from '../components/shell/layout'
 
 const Home: NextPage = () => {
@@ -19,8 +19,8 @@ const Home: NextPage = () => {
           <FlexBox flexDirection='row' justifyContent='center' alignItems='center' height={240}>
             <Column mx={1} justifyContent='space-evenly' height='100%'>
               <Box>
-                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>子育ても仕事も</Typography>
-                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>がんばりたい</Typography>
+                <Description>子育ても仕事も</Description>
+                <Description>がんばりたい</Description>
               </Box>
               <Box>
                 <Typography sx={{ fontSize: { xs: 24, sm: 32 } }} fontWeight={'bold'}>
@@ -48,8 +48,8 @@ const Home: NextPage = () => {
           >
             <Column mx={1} justifyContent='space-evenly' alignContent='end' height='100%'>
               <Box>
-                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>子育てを終え</Typography>
-                <Typography sx={{ fontSize: { xs: 16, sm: 20 } }}>地域に貢献したい</Typography>
+                <Description>子育てを終え</Description>
+                <Description>地域に貢献したい</Description>
               </Box>
               <Box>
                 <Typography sx={{ fontSize: { xs: 24, sm: 32 } }} fontWeight={'bold'}>
@@ -71,22 +71,8 @@ const Home: NextPage = () => {
         </Column>
 
         <Box sx={{ py: 2 }}>
-          <Typography
-            textAlign={'center'}
-            sx={{ fontSize: { xs: 32, sm: 48 } }}
-            fontSize={48}
-            fontWeight={'bold'}
-          >
-            ともに輝ける
-          </Typography>
-          <Typography
-            textAlign={'center'}
-            sx={{ fontSize: { xs: 32, sm: 48 } }}
-            fontSize={48}
-            fontWeight={'bold'}
-          >
-            地域へ！
-          </Typography>
+          <Title textAlign={'center'}>ともに輝ける</Title>
+          <Title textAlign={'center'}>地域へ！</Title>
         </Box>
         <Box>
           <Box
@@ -116,13 +102,7 @@ const Home: NextPage = () => {
               >
                 子育て支援事業Lea Lea
               </Typography>
-              <Typography
-                textAlign={'center'}
-                fontWeight={'bold'}
-                sx={{ fontSize: { xs: 32, sm: 48 } }}
-              >
-                家事代行サービス
-              </Typography>
+              <Title textAlign={'center'}>家事代行サービス</Title>
               <Row sx={{ py: 2, justifyContent: 'center' }}>
                 <Box
                   position='relative'
@@ -210,13 +190,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({ linkUrl, imageUrl, buttonColor,
           >
             <Image src={imageUrl} alt='' fill style={{ objectFit: 'cover' }} />
           </Box>
-          <Typography
-            sx={{
-              fontSize: { xs: 16, sm: 24 },
-            }}
-          >
-            {buttonText}
-          </Typography>
+          <Description>{buttonText}</Description>
         </Button>
       </Link>
     </Box>

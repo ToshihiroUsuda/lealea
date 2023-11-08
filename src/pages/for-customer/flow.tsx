@@ -1,9 +1,9 @@
 import { ArrowDownwardTwoTone } from '@mui/icons-material'
-import { Button, Paper, Typography } from '@mui/material'
+import { Button, Paper } from '@mui/material'
 import React from 'react'
 
 import Link from '../../components/common/link'
-import { Column, Row } from '../../components/common/styledComponents'
+import { Column, Description, Row } from '../../components/common/styledComponents'
 
 const FlowBlock: React.FC<{ needArrow?: boolean } & React.PropsWithChildren> = (props) => {
   return (
@@ -35,26 +35,20 @@ const Flow: React.FC = () => {
         <FlowBlock needArrow>
           <Link href='https://lin.ee/5ngDh7K'>
             <Button variant='text' color='info'>
-              <Typography pl={1} sx={{ fontSize: { xs: 16, sm: 24 } }}>
-                Lea Lea 公式Line
-              </Typography>
+              <Description pl={1}>Lea Lea 公式Line</Description>
             </Button>
           </Link>
-          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>をお友達追加</Typography>
+          <Description>をお友達追加</Description>
         </FlowBlock>
 
         <FlowBlock needArrow>
-          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>
-            運営から届くアンケートに回答
-          </Typography>
+          <Description>運営から届くアンケートに回答</Description>
         </FlowBlock>
         <FlowBlock needArrow>
-          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>
-            スタッフと日時・作業内容を調整
-          </Typography>
+          <Description>スタッフと日時・作業内容を調整</Description>
         </FlowBlock>
         <FlowBlock>
-          <Typography sx={{ fontSize: { xs: 16, sm: 24 } }}>家事代行当日！</Typography>
+          <Description>家事代行当日！</Description>
         </FlowBlock>
       </Column>
     </Row>
