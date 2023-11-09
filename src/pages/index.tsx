@@ -1,9 +1,9 @@
-import { Box, Button, Typography } from '@mui/material'
+import { Box, Typography } from '@mui/material'
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import Link from '../components/common/link'
+import { LinkButton } from '../components/button/linkButton'
 import { Column, Description, FlexBox, Row, Title } from '../components/common/styledComponents'
 import Layout from '../components/shell/layout'
 
@@ -151,48 +151,3 @@ const Home: NextPage = () => {
 }
 
 export default Home
-
-type LinkButtonProps = {
-  linkUrl: string
-  imageUrl: string
-  buttonColor: 'primary' | 'secondary'
-  buttonText: string
-}
-
-const LinkButton: React.FC<LinkButtonProps> = ({ linkUrl, imageUrl, buttonColor, buttonText }) => {
-  return (
-    <Box p={1}>
-      <Link href={linkUrl}>
-        <Button
-          variant='contained'
-          color={buttonColor}
-          sx={{
-            pb: 2,
-            px: 2,
-            color: 'black',
-            borderRadius: 10,
-            height: { xs: 200, sm: 280 },
-            width: { xs: 160, sm: 240 },
-            flexDirection: 'column',
-            justifyContent: 'end',
-            position: 'relative',
-          }}
-        >
-          <Box
-            sx={{
-              width: { xs: 120, sm: 200 },
-              height: { xs: 120, sm: 200 },
-              top: '10%',
-              borderRadius: '50%',
-              bgcolor: 'white',
-              position: 'absolute',
-            }}
-          >
-            <Image src={imageUrl} alt='' fill style={{ objectFit: 'cover' }} />
-          </Box>
-          <Description>{buttonText}</Description>
-        </Button>
-      </Link>
-    </Box>
-  )
-}

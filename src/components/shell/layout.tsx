@@ -16,13 +16,9 @@ import Image from 'next/image'
 // import Link from 'next/link'
 import React, { useState } from 'react'
 
+import InquiryButton from '../button/inquiryButton'
 import Link from '../common/link'
 import { Column, Row } from '../common/styledComponents'
-import InquiryButton from '../inquiry/inquiryButton'
-
-const style: React.CSSProperties = {
-  objectFit: 'cover',
-}
 
 interface ILayoutProps extends React.PropsWithChildren {
   home?: boolean

@@ -17,20 +17,6 @@ const defaultTheme = createTheme({
     },
   },
 
-  // palette: {
-  //   primary: {
-  //     dark: '#b16666',
-  //     main: '#FD9292', // 0, 18, 100
-  //     light: '#fda7a7',
-  //     contrastText: '#000000',
-  //   },
-  //   secondary: {
-  //     dark: '#66b070',
-  //     main: '#92fca1', // 128 18 100
-  //     light: '#a7fcb3',
-  //     contrastText: '#000000',
-  //   },
-  // },
   typography: {
     fontFamily: ['"M PLUS Rounded 1c"'].join(','),
   },

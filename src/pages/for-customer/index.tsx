@@ -3,7 +3,7 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 
-import { Column, Description, Row, Title } from '../../components/common/styledComponents'
+import { Column, Description, Title } from '../../components/common/styledComponents'
 import Layout from '../../components/shell/layout'
 import CustomerVoice from './customerVoice'
 import Flow from './flow'
@@ -19,8 +19,54 @@ const CustomerPage: NextPage = () => {
         <Title pt={4} variant='h3'>
           コンセプト
         </Title>
+        <Description></Description>
         <Column sx={{ alignItems: 'center' }}>
-          <Row>
+          <Description pt={2} sx={{ fontSize: { xs: 16, sm: 32 } }}>
+            なれない子育てに家事や仕事...
+          </Description>
+          <Description pb={2} sx={{ fontSize: { xs: 16, sm: 32 } }}>
+            毎日がんばっているあなたへ
+          </Description>
+          <Box
+            position='relative'
+            sx={{ width: { xs: 240, sm: 420 }, height: { xs: 240, sm: 420 } }}
+          >
+            <Image
+              src='/assets/concept/concept1.png'
+              alt='コンセプト1'
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </Box>
+          <Description py={4} sx={{ fontSize: { xs: 16, sm: 32 } }}>
+            先輩ママに頼ってみませんか？
+          </Description>
+          <Box
+            position='relative'
+            sx={{ width: { xs: 240, sm: 420 }, height: { xs: 240, sm: 420 } }}
+          >
+            <Image
+              src='/assets/concept/concept2.png'
+              alt='コンセプト2'
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </Box>
+          <Box
+            position='relative'
+            sx={{ width: { xs: 240, sm: 420 }, height: { xs: 240, sm: 420 } }}
+          >
+            <Image
+              src='/assets/concept/concept3.png'
+              alt='コンセプト3'
+              fill
+              style={{ objectFit: 'cover' }}
+            />
+          </Box>
+          <Description py={2} sx={{ fontSize: { xs: 16, sm: 32 } }}>
+            そんなご褒美Dayを贈りたい
+          </Description>
+          {/* <Row>
             <Box
               position='relative'
               sx={{ width: { xs: 120, sm: 200 }, height: { xs: 160, sm: 240 } }}
@@ -41,7 +87,7 @@ const CustomerPage: NextPage = () => {
           </Row>
 
           <Description>たまった家事を、家事業のプロの先輩ママにやってもらうことで、</Description>
-          <Description>空いた時間を子供と向き合う時間にあてよう！！</Description>
+          <Description>空いた時間を子供と向き合う時間にあてよう！！</Description> */}
         </Column>
 
         <Title pt={6} variant='h3'>
