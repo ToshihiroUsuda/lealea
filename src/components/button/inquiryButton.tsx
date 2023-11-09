@@ -10,12 +10,14 @@ const defaultBottom = 48
 const headerHeight = 280
 
 const InquiryButton = () => {
-  const [bottom, setBottom] = useState(defaultBottom)
+  const [display, setDisplay] = useState('block')
 
   const changeBottom = useCallback(() => {
     const bottomPosition = document.body.offsetHeight - (window.scrollY + window.innerHeight)
     if (bottomPosition < headerHeight) {
-      setBottom(defaultBottom + headerHeight - bottomPosition)
+      setDisplay('none')
+    } else {
+      setDisplay('block')
     }
   }, [])
 
@@ -28,8 +30,9 @@ const InquiryButton = () => {
     <Box
       role='presentation'
       sx={{
+        display: display,
         position: 'fixed',
-        bottom: bottom,
+        bottom: defaultBottom,
         left: '50%',
         transform: 'translateX(-50%)',
         zIndex: 10,

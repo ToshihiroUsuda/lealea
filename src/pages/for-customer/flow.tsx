@@ -34,8 +34,10 @@ const Flow: React.FC = () => {
       <Column minWidth={320} sx={{ width: '70%', alignItems: 'center' }}>
         <FlowBlock needArrow>
           <Link href='https://lin.ee/5ngDh7K'>
-            <Button variant='text' color='info'>
-              <Description pl={1}>Lea Lea 公式Line</Description>
+            <Button variant='text' color='success'>
+              <Description pl={1} fontWeight='bold'>
+                Lea Lea 公式Line
+              </Description>
             </Button>
           </Link>
           <Description>をお友達追加</Description>

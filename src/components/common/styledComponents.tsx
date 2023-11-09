@@ -18,9 +18,9 @@ export const TypoMPlus = styled(Typography)({
 })
 
 export const Title = styled(Typography)(({ theme }) => ({
-  fontSize: 36,
+  fontSize: 28,
   [theme.breakpoints.up('sm')]: {
-    fontSize: 48,
+    fontSize: 40,
   },
   fontWeight: 'bold',
 }))
