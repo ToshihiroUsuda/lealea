@@ -35,7 +35,7 @@ const Contact = () => {
                 sx={{ display: { xs: 'block', sm: 'none' } }}
               >
                 <Image
-                  src='/material/add_friend.png'
+                  src='/line/add_friend.png'
                   alt='友だち追加'
                   fill
                   style={{ objectFit: 'contain' }}
@@ -48,7 +48,7 @@ const Contact = () => {
                 sx={{ display: { xs: 'none', sm: 'block' } }}
               >
                 <Image
-                  src='/material/add_friend_qr.png'
+                  src='/line/add_friend_qr.png'
                   alt='友だち追加'
                   fill
                   style={{ objectFit: 'contain' }}

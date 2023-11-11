@@ -1,6 +1,6 @@
-import { Mail as MailIcon } from '@mui/icons-material'
 import Box from '@mui/material/Box'
 import Fab from '@mui/material/Fab'
+import Image from 'next/image'
 import { useCallback, useEffect, useState } from 'react'
 
 import Link from '../common/link'
@@ -51,8 +51,13 @@ const InquiryButton = () => {
             // background: 'linear-gradient(90deg, rgba(253, 146, 146, 1), rgba(209, 254, 212, 1))',
           }}
         >
-          <MailIcon />
-          <Description pl={1}>お問い合わせ</Description>
+          {/* <MailIcon /> */}
+          <Box position='relative' width={{ xs: 16, sm: 20 }} height={{ xs: 16, sm: 20 }}>
+            <Image src='/line/icon.png' alt='icon' fill />
+          </Box>
+          <Description pl={1} fontWeight={'bold'}>
+            公式LINE
+          </Description>
         </Fab>
       </Link>
     </Box>
